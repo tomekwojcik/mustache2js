@@ -1,0 +1,6 @@
+*.pyc
+*.swp
+build/*
+mustache2js.egg-info/*
+dist/*
+*.DS_Store
