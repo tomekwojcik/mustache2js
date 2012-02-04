@@ -112,7 +112,7 @@ def main():
         source_file.close()
         
         template_name = os.path.splitext(os.path.basename(path))[0]
-        coffee_code = template.format(template_name=template_name, template=source)
+        coffee_code = template.format(template_name=template_name, template=source).encode('utf-8')
         
         proc = subprocess.Popen([ coffee_path, '-b', '-c', '-s' ], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         compiled, proc_err = proc.communicate(input=coffee_code)
@@ -123,7 +123,7 @@ def main():
         
         dest_filename = os.path.join(options.destdir, template_name + '.js')
         dest_file = file(dest_filename, 'w')
-        dest_file.write(compiled.encode('utf-8'))
+        dest_file.write(compiled)
         dest_file.close()
 
     mtimes = {}
