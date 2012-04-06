@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Mustache2js by tomekwojcik</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/tomekwojcik/mustache2js">Fork On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/tomekwojcik/mustache2js/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/tomekwojcik/mustache2js/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Mustache2js</h1>
+          <p>Awesome Mustache to JavaScript converter</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/tomekwojcik">tomekwojcik</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>mustache2js</h1>
+
+<p>Awesome Mustache to JavaScript converter.</p>
+
+<p>This script wraps Mustache templates in some JavaScript to make using Mustache
+templates in Web apps easier. The wrapping is done using CoffeeScript.</p>
+
+<h2>Usage</h2>
+
+<p><code>mustache2js [options] file1 file2 file...</code></p>
+
+<p>For list of options see <code>mustache2js -h</code></p>
+
+<h2>WTF?</h2>
+
+<p>Hack your template, convert it to JavaScript string and wrap the string in some
+code to make it available to the browser.</p>
+
+<p>The code that does the wrapping is::</p>
+
+<div class="highlight">
+<pre><span class="nb">window</span><span class="p">.</span><span class="nx">templates</span><span class="p">[</span><span class="s">"{template_name}"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"""{template}"""</span>
+</pre>
+</div>
+
+
+<p>where <code>template_name</code> is the file name and <code>template</code> is, well, the template
+itself :).</p>
+
+<p>This is CoffeeScript code that's then compiled to JavaScript with <code>coffee</code>.
+Make sure you have CoffeeScript compiler in your path.</p>
+
+<p>You can change the wrapping code using <code>-t</code> option.</p>
+
+<h2>License</h2>
+
+<p>MIT-style, see LICENSE.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+  </body>
+</html>
